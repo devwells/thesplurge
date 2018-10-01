@@ -30,9 +30,9 @@ class HighlightArticles extends React.Component {
               marginLeft: rhythm(.5),
               flexGrow: 2
             }}>
-              <SmallPreview post={posts[0].node}/>
-              <SmallPreview post={posts[0].node}/>
-              <SmallPreview post={posts[0].node}/>
+              <SmallPreview post={posts[1].node}/>
+              <SmallPreview post={posts[2].node}/>
+              <SmallPreview post={posts[3].node}/>
             </div>
           </div>
         </div>
