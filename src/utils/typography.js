@@ -1,15 +1,24 @@
 import Typography from 'typography'
-import Wordpress2016 from 'typography-theme-wordpress-2016'
+import palette from "./palette"
 
-Wordpress2016.overrideThemeStyles = () => ({
-  'a.gatsby-resp-image-link': {
-    boxShadow: 'none',
-  },
+const typography = new Typography({
+  baseFontSize: '16px',
+  baseLineHeight: 1.666,
+  headerFontFamily: ['Antic Slab'],
+  bodyFontFamily: ['Georgia', 'serif'],
+  bodyColor: palette.charcoal,
+  overrideThemeStyles: ({ rhythm }, options, styles) => ({
+    'h1': {
+      fontFamily: 'Dancing Script',
+      color: palette.black
+    },
+    'h2': {
+      fontSize: "35px"
+    }
+  })
 })
 
-delete Wordpress2016.googleFonts
 
-const typography = new Typography(Wordpress2016)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {

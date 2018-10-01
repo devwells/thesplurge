@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import palette from "../utils/palette"
 import { rhythm, scale } from '../utils/typography'
 
 class Template extends React.Component {
   render() {
-    const { location, children } = this.props
+    const { location, children, title } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
@@ -16,27 +17,31 @@ class Template extends React.Component {
             ...scale(1.5),
             marginBottom: rhythm(1.5),
             marginTop: 0,
+            textAlign: "center",
+            backgroundColor: palette.primary,
+            padding: rhythm(1)
           }}
         >
           <Link
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
-              color: 'inherit',
+              color: palette.white,
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            {title}
           </Link>
         </h1>
       )
     } else {
       header = (
-        <h3
+        <h1
           style={{
-            fontFamily: 'Montserrat, sans-serif',
+            textAlign: "center",
             marginTop: 0,
             marginBottom: rhythm(-1),
+            color: palette.primary
           }}
         >
           <Link
@@ -47,9 +52,9 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            {title}
           </Link>
-        </h3>
+        </h1>
       )
     }
     return (
@@ -57,8 +62,7 @@ class Template extends React.Component {
         style={{
           marginLeft: 'auto',
           marginRight: 'auto',
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: 0
         }}
       >
         {header}

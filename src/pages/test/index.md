@@ -1,7 +1,8 @@
 ---
-title: My Second Post!
-date: "2015-05-06T23:46:37.121Z"
-image: "./banner.jpg"
+test: this is a test
+image: ./banner.jpg
+title: test World2
+date: "2018-05-01T22:12:03.284Z"
 ---
 
 Wow! I love blogging so much already.

@@ -1,17 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    title: 'The Splurge',
+    author: 'Devin Wells',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet urna ante, eu luctus massa ultrices at. Ut eu ex nec arcu semper mattis. Nunc tempor erat bibendum nisi volutpat, sit amet bibendum risus elementum. Ut dapibus risus placerat mauris condimentum, in pharetra lectus varius. ',
+    siteUrl: 'https://thesplurge.co',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/bios`,
+        name: 'bios',
       },
     },
     {
@@ -48,8 +55,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `The Splurge`,
+        short_name: `thesplurge`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -64,6 +71,14 @@ module.exports = {
       options: {
         pathToConfigModule: 'src/utils/typography',
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Dancing Script\: 400`,
+        ]
+      }
     },
   ],
 }
